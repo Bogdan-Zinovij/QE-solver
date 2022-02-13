@@ -1,6 +1,11 @@
 'use strict';
 
+const interactiveInput = require('./interactiveInput');
 const fileInput = require('./fileInput');
 
 const filePath = process.argv[2];
-fileInput(filePath);
+if (filePath) {
+  fileInput(filePath);
+} else {
+  interactiveInput();
+}
